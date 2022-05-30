@@ -1,0 +1,62 @@
+﻿@model AlphaGenAPI.Models.UserParams
+@{
+   List<SelectListItem> listItems= new List<SelectListItem>();
+   listItems.Add(new SelectListItem
+        {
+          Text = "Fit",
+          Value = "Fit"
+        });
+   listItems.Add(new SelectListItem
+        {
+            Text = "Obez",
+            Value = "Obez",
+            Selected = true
+        });
+   listItems.Add(new SelectListItem
+        {
+            Text = "Üçgen",
+            Value = "Üçgen"
+        });
+         listItems.Add(new SelectListItem
+        {
+            Text = "Ters Üçgen",
+            Value = "Ters Üçgen"
+        });
+}
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h1>Durumum</h1>
+
+    @using (Html.BeginForm("Edit", "UserParams", FormMethod.Post))
+{<h4>Kilo(kg)</h4>
+    @Html.TextBoxFor(model => model.Weight, new {required="required" })
+    @Html.ValidationMessageFor(model => model.Weight)
+    
+    <br />
+    <br />
+    <h4>Boy(cm)</h4>
+     @Html.TextBoxFor(model => model.Lenght, new {required="required" })
+    @Html.ValidationMessageFor(model => model.Lenght)
+    <br />
+    <br />
+     <h4>Ön Kol Ölçüsü(cm)</h4>
+     @Html.TextBoxFor(model => model.Biceps, new { @type = "number", required="required" })
+    @Html.ValidationMessageFor(model => model.Biceps)
+    <br />
+    <br />
+     <h4>Vücut Tipi</h4>
+     @Html.DropDownListFor(model => model.Type , listItems, "Vücut Tipini Seçin")
+    @Html.ValidationMessageFor(model => model.Type)
+    <br />
+    <br />
+     
+    <button type="submit">Kayıt Et</button>
+
+}
+ 
+
+
+

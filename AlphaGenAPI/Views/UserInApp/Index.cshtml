@@ -1,0 +1,44 @@
+﻿@model AlphaGenAPI.Models.UserInApp
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h1>Bilgilerim</h1>
+
+<div>
+    @using (Html.BeginForm("Edit", "UserInApp", FormMethod.Post))
+{<h4>İsim(Zorunlu)</h4>
+    @Html.TextBoxFor(model => model.Ad, new {required="required" })
+    @Html.ValidationMessageFor(model => model.Ad)
+    
+    <br />
+    <br />
+    <h4>Soyisim(Zorunlu)</h4>
+     @Html.TextBoxFor(model => model.Soyad, new {required="required" })
+    @Html.ValidationMessageFor(model => model.Soyad)
+    <br />
+    <br />
+     <h4>Yaş</h4>
+     @Html.TextBoxFor(model => model.Yas, new { @type = "number", required="required" })
+    @Html.ValidationMessageFor(model => model.Yas)
+    <br />
+    <br />
+     <h4>Spor Salonumun Adı</h4>
+     @Html.TextBoxFor(model => model.Salon)
+    @Html.ValidationMessageFor(model => model.Salon)
+    <br />
+    <br />
+     <h4>Adresim</h4>
+     @Html.TextBoxFor(model => model.Adres)
+    @Html.ValidationMessageFor(model => model.Adres)
+    <br />
+    <br />
+    <button type="submit">Kayıt Et</button>
+
+}
+ 
+
+
+

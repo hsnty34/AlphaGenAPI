@@ -1,0 +1,115 @@
+﻿@{
+    ViewData["Title"] = "AlphaGEN v1";
+}
+@{
+  Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<style>
+body,h1{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: #0A0433;
+}
+.sayfa{
+	width: 960px;
+	margin: 5px auto;
+}
+#logo{
+	float: left;
+	color:whitesmoke;
+	font-size: 23pt;
+	font-family: Verdana;
+	font-weight: bolder;
+	margin-top: 10px;
+	margin-right: 40px;
+	margin-left: 10px;
+	background-color: #295784;
+}
+ 
+#menu{
+	float: left;
+	list-style: none;
+}
+#menu li{
+	float: left;
+}
+#menu li a{
+	text-decoration: none;
+	color: white;
+	padding-right: 20px;
+	padding-left: 20px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	font-size: 14pt;
+}
+#menu li a:hover{
+	background-color: #295784;
+	border-radius: 10px;
+}
+ 
+#icerik{
+	background-color: aliceblue;
+ 
+}
+#galeri img{
+	height: 300px;
+	width: 940px;
+	margin: 10px 10px;
+}
+ 
+.yazi{
+	width: 300px;
+	float: left;
+	background-color: #5E95E0;
+	margin-left: 15px;
+	margin-bottom: 30px;
+}
+.yazi h1{
+	color: whitesmoke;
+	margin-left: 10px;
+}
+ 
+.yazi p{
+	text-indent: 20px;
+	text-align: justify;
+	margin: 10px;
+}
+.temizle{
+	clear: both;
+}
+</style>
+
+ 
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS Div Örnekleri</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+ 
+<body>
+<div class="sayfa">
+	
+	<div id="icerik">
+		<div id="galeri">
+			<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8b906beb-4665-4d15-b188-459d505b6054/dekt9j9-ad8ef5e2-1324-4887-b213-f0a5d2ad5e67.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhiOTA2YmViLTQ2NjUtNGQxNS1iMTg4LTQ1OWQ1MDViNjA1NFwvZGVrdDlqOS1hZDhlZjVlMi0xMzI0LTQ4ODctYjIxMy1mMGE1ZDJhZDVlNjcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.aMqjGJQupXN6nbI3x37-69_go85QJP4uvurdOzPofa8" alt="resim1">
+		</div>
+		<div class="yazi">
+			<h1>Şimdi başla</h1>
+			<p>Antremanını oluştur ve başla. AlphaGEN'de mevcut durumunu görüntüleyebilir, bölgelerine göre hareket önerileri alabilirsin. </p>
+		</div>
+		<div class="yazi">
+			<h1>Güncel supplement piyasası</h1>
+			<p>AlphaGEN'de yardımcı besin önerileri alabilir, fiyatlarını kıyaslayabilir ve optimum verim elde edebileceğin bir sepet oluşturabilirsin.  </p>
+		</div>
+		<div class="yazi">
+			<h1>Makaleler </h1>
+			<p>AlphaGEN'de spor camiasından önde gelen isimlerin yorumlarını dinleyebilir ve bilimsel makaleleri takip edebilirsin. </p>
+		</div>
+		<div class="temizle"></div>
+	</div>
+</div>
+</body>
+</html>
